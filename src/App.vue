@@ -1,23 +1,38 @@
 <template>
   <div>
-    {{logged}}
-    <button @click="handleMenu('home')">home</button>
 
-    <button v-if="!logged" 
-      @click="handleMenu('login')">login</button>
+  {{logged}}
+  <button @click="handleMenu('home')">home</button>
 
-    <button v-if="logged" 
-      @click="handleMenu('logout')">logout</button>
+  <button v-if="!logged" 
+    @click="handleMenu('login')">login</button>
 
-    <button v-if="logged === false" 
-      @click="handleMenu('join')" >join</button>
+  <button v-if="logged" 
+    @click="handleMenu('logout')">logout</button>
 
-    <button v-if="logged === true"
-      @click="handleMenu('mypage')">mypage</button>
+  <button v-if="logged === false" 
+    @click="handleMenu('join')" >join</button>
+
+  <button v-if="logged === true"
+    @click="handleMenu('mypage')">mypage</button>
+
+  <el-row>
+    <el-col :span="2">
+
+    </el-col>
+    <el-col :span="20">
+
+      <router-view></router-view>
+
+    </el-col>
+    <el-col :span="2"><div class="grid-content bg-purple" /></el-col>
+  </el-row>
+
+
 
     <hr />
 
-    <router-view></router-view>
+    
   </div>
 </template>
 

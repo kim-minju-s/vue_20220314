@@ -14,6 +14,12 @@ module.exports = {
                 changeOrigin :true,
                 logLevel : 'debug'
             },
+
+            '/item' : { //rest
+                target:'http://localhost:3000',
+                changeOrigin :true,
+                logLevel : 'debug'
+            },
         },
     },
 }
