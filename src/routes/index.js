@@ -9,6 +9,7 @@ import Chat from '@/components/ChatView';
 import Item from '@/components/ItemView';
 import Admin from '@/components/AdminView';
 import Admin1 from '@/components/Admin1View';
+import Map from '@/components/Map';
 
 const routes =[
     { path : '/', redirect:'/home'},
@@ -21,6 +22,7 @@ const routes =[
     { path : '/item', name:'Item', component:Item },
     { path : '/admin', name:'Admin', component:Admin },
     { path : '/admin1', name:'Admin1', component:Admin1 },
+    { path : '/map', name:'Map', component:Map },
 ];
 
 const router = createRouter({ 
